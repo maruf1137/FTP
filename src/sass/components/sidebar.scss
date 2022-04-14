@@ -1,0 +1,96 @@
+.sidebar {
+  height: auto;
+  width: 12rem;
+  background-color: $color-bg-dark;
+  border-radius: 1rem 0 0 1rem;
+  position: relative;
+  padding: 2rem 0;
+
+  @media only screen and (max-width: $tab-land) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    padding: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media only screen and (max-width: $tab-land) {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    background: rgba(255, 255, 255, 0.267);
+    padding: 1rem 1rem 0.5rem 1rem;
+    border-radius: 0.6rem;
+
+    @media only screen and (max-width: $tab-land) {
+      background: transparent;
+      padding: 0;
+    }
+  }
+
+  &__link,
+  .settings-btn {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    gap: 0.6rem;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $tab-land) {
+      padding: 2rem;
+      border-top: 3px solid transparent;
+    }
+
+    .icon {
+      height: 3.8rem;
+      width: 3.8rem;
+      fill: $color-white;
+    }
+
+    .text {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $color-white;
+
+      @media only screen and (max-width: $tab-land) {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &.active {
+      background-color: $color-secondary;
+
+      @media only screen and (max-width: $tab-land) {
+        background-color: transparent;
+        border-top: 3px solid $color-secondary;
+
+        svg {
+          fill: $color-secondary;
+        }
+      }
+    }
+  }
+
+  .settings-btn {
+    @media only screen and (max-width: $tab-land) {
+      display: none;
+    }
+  }
+}

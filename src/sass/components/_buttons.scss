@@ -1,0 +1,54 @@
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 1.7rem 3rem;
+  border: 2px solid #fff;
+  background: $color-primary;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  font-family: $font-secondary;
+}
+
+.settings-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+
+  // @media only screen and (max-width: $tab-land) {
+  //   display: none;
+  // }
+}
+
+.btn-all {
+  background-color: transparent;
+  color: $color-primary;
+  font-size: 1.2rem;
+}
+
+.btn-add {
+  padding: 0.7rem 2.5rem;
+  border: 2px solid #fff;
+  background: $color-white;
+  color: $color-primary;
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  font-family: $font-secondary;
+  position: absolute;
+  right: 0;
+
+  @media only screen and (max-width: $tab-land) {
+    display: none;
+  }
+}
